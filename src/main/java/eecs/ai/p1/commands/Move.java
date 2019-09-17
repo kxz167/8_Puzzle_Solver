@@ -2,10 +2,12 @@ package eecs.ai.p1.commands;
 
 import java.util.ArrayList;
 
+import eecs.ai.p1.Board;
+
 public class Move extends Command {
 
-    public Move(ArrayList<Command> commandList){
-        super(commandList);
+    public Move(ArrayList<Command> commandList, Board gameBoard){
+        super(commandList, gameBoard);
     }
 
     @Override

@@ -9,7 +9,7 @@ public class Board {
 
     private ArrayList<Integer> board;
 
-    private Board(){
+    public Board(){
         List<Integer> range = IntStream.rangeClosed(0, 8)
             .boxed()
             .collect(Collectors.toList());
@@ -22,6 +22,25 @@ public class Board {
         return this.board;
     }
 
+    @Override
+    public String toString()
+    {
+        StringBuilder builder = new StringBuilder();
+
+        for(int i = 1; i <= board.size(); i++)
+        {
+            builder.append(board.get(i - 1) == 0 ? " " : board.get(i - 1));
+            builder.append("   ");
+
+            if(i % 3 == 0)
+            {
+                builder.append(System.getProperty("line.separator"));
+                builder.append(System.getProperty("line.separator"));
+            }
+        }
+
+        return builder.toString();
+    }
 
 
 }
