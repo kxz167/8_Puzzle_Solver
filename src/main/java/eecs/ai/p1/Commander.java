@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 import eecs.ai.p1.commands.*;
 
-public final class Commander implements Iterable<Command>{
+//implements Iterable<Command>
+public final class Commander{
     // private final File filename;
     private final ArrayList<Command> commands;
     private final Board gameBoard;
@@ -48,12 +49,12 @@ public final class Commander implements Iterable<Command>{
         return new Commander(commands, gameBoard);
     }
 
-    @Override
-    public Iterator<Command> iterator() {
-        return new Command(this.commands, this.gameBoard);
-    }
+    // @Override
+    // public Iterator<Command> iterator() {
+    //     return new Command(this.commands, this.gameBoard);
+    // }
 
-    public void add (Command command){
-        this.commands.add(command);
-    }
+    // public void add (Command command){
+    //     this.commands.add(command);
+    // }
 }

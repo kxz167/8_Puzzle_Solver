@@ -7,12 +7,12 @@ import eecs.ai.p1.Board;
 public class SolveAStar extends Command {
 
     public SolveAStar(ArrayList<Command> commandList, Board gameBoard){
-        super(commandList, gameBoard);
+        // super(commandList, gameBoard);
     }
 
 
-    @Override
-    public final boolean execute(){
-        return true;
-    }
+    // @Override
+    // public final boolean execute(){
+    //     return true;
+    // }
 }

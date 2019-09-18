@@ -12,7 +12,7 @@ public class PrintState extends Command {
 
     
     @Override
-    public final boolean execute(){
+    public final boolean execute(Board gameBoard){
         System.out.println(gameBoard);
         return true;
     }
