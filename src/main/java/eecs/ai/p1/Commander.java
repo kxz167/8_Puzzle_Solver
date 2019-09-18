@@ -35,8 +35,11 @@ public final class Commander{
                         fileScanner.next() + fileScanner.next() + fileScanner.next()
                     ));
                 case "printState":
-
+                    commands.add(PrintState.of());
                 case "move":
+                    commands.add(Move.of(
+                        fileScanner.next()
+                    ));
 
                 case "randomizeState":
 

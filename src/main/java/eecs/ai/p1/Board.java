@@ -12,7 +12,7 @@ public class Board {
     private ArrayList<Integer> board;
 
     public Board(){
-        List<Integer> range = IntStream.rangeClosed(0, 8)
+        List<Integer> range = IntStream.rangeClosed(1, 9)
             .boxed()
             .collect(Collectors.toList());
         
@@ -23,7 +23,8 @@ public class Board {
     //TODO Make a method which takes in a string for the state and sets it as the state
     public final boolean setBoard(String board){
         ArrayList<Integer> newBoard = new ArrayList<Integer>();
-        
+        newBoard.add(-1);
+
         char[] characters = board.toCharArray();
         for(char c : characters){
             if(c == 'b')
@@ -42,14 +43,18 @@ public class Board {
         return this.board;
     }
 
+    public final int position(){
+        return board.indexOf(0);
+    }
+
     @Override
     public String toString()
     {
         StringBuilder builder = new StringBuilder();
 
-        for(int i = 1; i <= board.size(); i++)
+        for(int i = 1; i < board.size(); i++)
         {
-            builder.append(board.get(i - 1) == 0 ? " " : board.get(i - 1));
+            builder.append(board.get(i) == 0 ? " " : board.get(i));
             builder.append("   ");
 
             if(i % 3 == 0)
@@ -60,6 +65,14 @@ public class Board {
         }
 
         return builder.toString();
+    }
+
+    public final ArrayList<Directions> getLegalMoves(){
+        int currentPosition = this.position();
+        switch(currentPosition){
+            // case currentPosition % 3 == 1:
+        }
+
     }
 
 

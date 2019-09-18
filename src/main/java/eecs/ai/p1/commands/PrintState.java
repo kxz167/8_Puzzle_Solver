@@ -6,8 +6,12 @@ import eecs.ai.p1.Board;
 
 public class PrintState extends Command {
 
-    public PrintState(ArrayList<Command> commandList, Board board){
+    private PrintState(){
         // super(commandList, board);
+    }
+
+    public static final PrintState of(){
+        return new PrintState();
     }
 
     

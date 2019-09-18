@@ -3,6 +3,7 @@
  */
 package eecs.ai.p1;
 
+import eecs.ai.p1.commands.PrintState;
 import eecs.ai.p1.commands.SetState;
 
 public class App {
@@ -10,11 +11,11 @@ public class App {
 
         //Create the board
         Board gameBoard = new Board();
-        System.out.println(gameBoard);
+        PrintState.of().execute(gameBoard);
 
         SetState.of("876543210").execute(gameBoard);
 
-        System.out.println(gameBoard);
+        PrintState.of().execute(gameBoard);
 
         //Create the list of commands
 
