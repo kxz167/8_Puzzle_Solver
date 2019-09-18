@@ -7,7 +7,7 @@ import eecs.ai.p1.Board;
 public class Move extends Command {
 
     public Move(ArrayList<Command> commandList, Board gameBoard){
-        super(commandList, gameBoard);
+        // super(commandList, gameBoard);
     }
 
     @Override

@@ -7,7 +7,7 @@ import eecs.ai.p1.Board;
 public class RandomizeState extends Command {
 
     public RandomizeState(ArrayList<Command> commandList, Board gameBoard){
-        super(commandList, gameBoard);
+        // super(commandList, gameBoard);
     }
 
 

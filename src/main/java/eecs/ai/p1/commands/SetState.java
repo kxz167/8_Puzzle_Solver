@@ -6,13 +6,20 @@ import eecs.ai.p1.Board;
 
 public class SetState extends Command {
 
-    public SetState(ArrayList<Command> commandList, Board gameBoard){
-        super(commandList, gameBoard);
+    private final String state;
+
+    private SetState(String state){
+        // super(commandList, gameBoard);
+        this.state = state;
     }
 
+    public static final SetState of(String state){
+        return new SetState(state);
+    }
 
     @Override
-    public final boolean execute(){
+    public final boolean execute(Board board){
+        board.setBoard(this.state);
         return true;
     }
 }

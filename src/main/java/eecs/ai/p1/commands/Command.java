@@ -9,33 +9,32 @@ import java.util.function.Function;
 import eecs.ai.p1.Board;
 import eecs.ai.p1.CommandType;
 
-public class Command{
+public abstract class Command{
 
     private ArrayList<Command> commandList;
     private int position;
     
-    protected final Board gameBoard;
+    // protected final Board gameBoard;
+    // public Command(ArrayList<Command> commandList, Board gameBoard){
+    //     this.commandList = commandList;
+    //     this.gameBoard = gameBoard;
+    // }
 
-    public Command(ArrayList<Command> commandList, Board gameBoard){
-        this.commandList = commandList;
-        this.gameBoard = gameBoard;
-    }
+    // public static final Command of (String inputs){
+    //     // return constructor.get()
 
-    public Command of (String inputs){
-        // return constructor.get()
+    //     final EnumMap<CommandType, Function<String, Command>> myConstructor = new EnumMap<>(Map.of(
+    //             CommandType.MOVE, inputs -> new Move(inputs),
+    //             CommandType.PRINTSTATE, inputs-> new PrintState(),
+    //             CommandType.RANDOMIZESTATE, inputs -> new RandomizeState(inputs),
+    //             CommandType.SETSTATE, inputs -> new SetState(inputs),
+    //             CommandType.SOLVEASTAR, inputs -> new SolveAStar(inputs),
+    //             CommandType.SOLVEBEAM, inputs -> new SolveBeam(inputs)
+    //         ));
 
-        final EnumMap<CommandType, Function<String, Command>> myConstructor = new EnumMap<>(Map.of(
-                CommandType.MOVE, inputs -> new Move(inputs),
-                CommandType.PRINTSTATE, inputs-> new PrintState(),
-                CommandType.RANDOMIZESTATE, inputs -> new RandomizeState(inputs),
-                CommandType.SETSTATE, inputs -> new SetState(inputs),
-                CommandType.SOLVEASTAR, inputs -> new SolveAStar(inputs),
-                CommandType.SOLVEBEAM, inputs -> new SolveBeam(inputs)
-            ));
+    // }
 
-    }
-
-    public boolean execute(){
+    public boolean execute(Board board){
         return true;
     }
     

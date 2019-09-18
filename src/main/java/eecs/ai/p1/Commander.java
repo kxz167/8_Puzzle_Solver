@@ -30,8 +30,9 @@ public final class Commander implements Iterable<Command>{
         while(fileScanner.hasNext()){
             switch(fileScanner.next()){
                 case "setState":
-
-                    commands.add(SetState.of(fileScanner.next()));
+                    commands.add(SetState.of(
+                        fileScanner.next() + fileScanner.next() + fileScanner.next()
+                    ));
                 case "printState":
 
                 case "move":
