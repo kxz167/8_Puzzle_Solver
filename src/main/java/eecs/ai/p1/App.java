@@ -8,7 +8,6 @@ public class App {
 
         //Create the board
         Board gameBoard = new Board();
-
         System.out.println(gameBoard);
 
         //Create the list of commands
