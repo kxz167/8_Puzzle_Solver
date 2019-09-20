@@ -67,6 +67,7 @@ public class Move extends Command {
         for(Directions dir : direction.keySet()){
             if(board.getLegalMoves().contains(dir) && direction.containsKey(dir)){
                 Collections.swap(board.getBoard(), board.position(), board.position() + direction.get(dir));
+                board.addVisited(board.getState());
                 PrintState.of().execute(board);
                 return true;
             }

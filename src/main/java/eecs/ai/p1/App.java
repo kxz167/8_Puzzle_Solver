@@ -24,21 +24,14 @@ public class App {
         // PrintState.of().execute(gameBoard);
         Move.of("Right").execute(gameBoard);
         // PrintState.of().execute(gameBoard);
-
-        RandomizeState.of(0).execute(gameBoard);
+        System.out.println(gameBoard.getState());
+        // RandomizeState.of(0).execute(gameBoard);
         // PrintState.of().execute(gameBoard);
-        RandomizeState.of(2).execute(gameBoard);
+        // RandomizeState.of(2).execute(gameBoard);
         // PrintState.of().execute(gameBoard);
         // RandomizeState.of(10).execute(gameBoard);
         // PrintState.of().execute(gameBoard);
-        RandomizeState.of(100).execute(gameBoard);
+        // RandomizeState.of(100).execute(gameBoard);
         // PrintState.of().execute(gameBoard);
-
-
-
-
-        //Create the list of commands
-
-        //Run through the list of commands
     }
 }

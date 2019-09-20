@@ -2,6 +2,7 @@ package eecs.ai.p1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -11,6 +12,7 @@ public class Board {
 
     private List<Integer> board;
     private List<Integer> legalMoves;
+    private final HashSet<String> visitedStates = new HashSet<>();
 
     public Board(){
         List<Integer> range = IntStream.rangeClosed(0, 8)
@@ -98,5 +100,15 @@ public class Board {
         return newLegalMoves;
     }
 
+    public final HashSet<String> getVisited(){
+        return this.visitedStates;
+    }
 
+    public final void addVisited(String state){
+        this.visitedStates.add(state);
+    }
+
+    public final String getState(){
+        return this.board.stream().skip(1).map( n -> n.toString()).collect(Collectors.joining());
+    }
 }
