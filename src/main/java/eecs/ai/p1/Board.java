@@ -9,7 +9,8 @@ import java.util.stream.Stream;
 
 public class Board {
 
-    private ArrayList<Integer> board;
+    private List<Integer> board;
+    private List<Integer> legalMoves;
 
     public Board(){
         List<Integer> range = IntStream.rangeClosed(1, 9)
@@ -39,7 +40,7 @@ public class Board {
     }
 
 
-    public final ArrayList<Integer> getBoard(){
+    public final List<Integer> getBoard(){
         return this.board;
     }
 
@@ -67,12 +68,31 @@ public class Board {
         return builder.toString();
     }
 
-    public final ArrayList<Directions> getLegalMoves(){
+    public final List<Directions> getLegalMoves(){
         int currentPosition = this.position();
-        switch(currentPosition){
-            // case currentPosition % 3 == 1:
+        List<Directions> newLegalMoves = new ArrayList<>(Arrays.asList(Directions.values()));
+
+        if(currentPosition % 3 == 1){
+            newLegalMoves.remove(Directions.LEFT);
+        }
+        else if(currentPosition % 3 == 0){
+            newLegalMoves.remove(Directions.RIGHT);
+        }
+        else{
+            //In the middle horizontally
         }
 
+        if(currentPosition <= 3){
+            newLegalMoves.remove(Directions.UP);
+        }
+        else if(7 <= currentPosition){
+            newLegalMoves.remove(Directions.DOWN);
+        }
+        else{
+            //In the middle vertically.
+        }
+
+        return newLegalMoves;
     }
 
 

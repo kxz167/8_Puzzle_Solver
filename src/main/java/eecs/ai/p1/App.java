@@ -5,6 +5,7 @@ package eecs.ai.p1;
 
 import eecs.ai.p1.commands.PrintState;
 import eecs.ai.p1.commands.SetState;
+import eecs.ai.p1.commands.*;
 
 public class App {
     public static void main(String[] args) {
@@ -14,7 +15,14 @@ public class App {
         PrintState.of().execute(gameBoard);
 
         SetState.of("876543210").execute(gameBoard);
-
+        PrintState.of().execute(gameBoard);
+        Move.of("UP").execute(gameBoard);
+        PrintState.of().execute(gameBoard);
+        Move.of("Left").execute(gameBoard);
+        PrintState.of().execute(gameBoard);
+        Move.of("Right").execute(gameBoard);
+        PrintState.of().execute(gameBoard);
+        Move.of("Right").execute(gameBoard);
         PrintState.of().execute(gameBoard);
 
         //Create the list of commands

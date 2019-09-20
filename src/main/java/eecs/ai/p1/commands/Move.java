@@ -35,16 +35,17 @@ public class Move extends Command {
 
     @Override
     public final boolean execute(Board board){
-        for(Directions dir : direction.keySet()){
-            switch (board.position()){
-                // case board.position():
-                    // ;
-            }
-            Collections.swap(board.getBoard(), board.position(), board.position() + direction.get(dir));
-        }
-
-        return true;
         
+        for(Directions dir : direction.keySet()){
+            if(board.getLegalMoves().contains(dir)){
+                Collections.swap(board.getBoard(), board.position(), board.position() + direction.get(dir));
+                return true;
+            }
+            else{
+                //Do nothing, the move is illegal
+            }
+        }
+        return false;
     }
 
     // @Override
