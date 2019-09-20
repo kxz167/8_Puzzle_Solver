@@ -22,23 +22,52 @@ public class Move extends Command {
         switch (direction.toLowerCase()){
             case "up":
                 newDirection.put(Directions.UP, -3);
+                break;
             case "down":
                 newDirection.put(Directions.DOWN, 3);
+                break;
             case "left":
                 newDirection.put(Directions.LEFT, -1);
+                break;
             case "right":
                 newDirection.put(Directions.RIGHT, 1);
+                break;
         }
 
         return new Move(newDirection);
     }
 
+    public static final Move of(Directions direction){
+        EnumMap<Directions, Integer> newDirection = new EnumMap<>(Directions.class);
+
+        switch (direction){
+            case UP:
+                newDirection.put(Directions.UP, -3);
+                break;
+            case DOWN:
+                newDirection.put(Directions.DOWN, 3);
+                break;
+            case LEFT:
+                newDirection.put(Directions.LEFT, -1);
+                break;
+            case RIGHT:
+                newDirection.put(Directions.RIGHT, 1);
+                break;
+        }
+
+        return new Move(newDirection);
+    }
+
+    // public static final Move of(){
+
+    // }
+
     @Override
     public final boolean execute(Board board){
-        
         for(Directions dir : direction.keySet()){
-            if(board.getLegalMoves().contains(dir)){
+            if(board.getLegalMoves().contains(dir) && direction.containsKey(dir)){
                 Collections.swap(board.getBoard(), board.position(), board.position() + direction.get(dir));
+                PrintState.of().execute(board);
                 return true;
             }
             else{

@@ -13,11 +13,13 @@ public class Board {
     private List<Integer> legalMoves;
 
     public Board(){
-        List<Integer> range = IntStream.rangeClosed(1, 9)
+        List<Integer> range = IntStream.rangeClosed(0, 8)
             .boxed()
             .collect(Collectors.toList());
         
-        this.board = new ArrayList<>(range);
+        this.board = new ArrayList<>();
+        this.board.add(-1);
+        this.board.addAll(range);
 
     }
 
@@ -70,6 +72,7 @@ public class Board {
 
     public final List<Directions> getLegalMoves(){
         int currentPosition = this.position();
+
         List<Directions> newLegalMoves = new ArrayList<>(Arrays.asList(Directions.values()));
 
         if(currentPosition % 3 == 1){

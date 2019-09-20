@@ -14,16 +14,28 @@ public class App {
         Board gameBoard = new Board();
         PrintState.of().execute(gameBoard);
 
-        SetState.of("876543210").execute(gameBoard);
-        PrintState.of().execute(gameBoard);
+        // SetState.of("876543210").execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
         Move.of("UP").execute(gameBoard);
-        PrintState.of().execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
         Move.of("Left").execute(gameBoard);
-        PrintState.of().execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
         Move.of("Right").execute(gameBoard);
-        PrintState.of().execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
         Move.of("Right").execute(gameBoard);
-        PrintState.of().execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
+
+        RandomizeState.of(0).execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
+        RandomizeState.of(2).execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
+        // RandomizeState.of(10).execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
+        RandomizeState.of(100).execute(gameBoard);
+        // PrintState.of().execute(gameBoard);
+
+
+
 
         //Create the list of commands
 
