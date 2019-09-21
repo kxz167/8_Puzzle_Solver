@@ -10,109 +10,87 @@ import java.util.stream.Stream;
 
 public class Board {
 
-    private List<Integer> board;
-    private List<Integer> legalMoves;
-    private final HashSet<String> visitedStates = new HashSet<>();
+    private BoardState state;
+    private List<ArrayList<Directions>> legalMoves;
 
-    public Board(){
+    private List<Integer> board;
+    // private List<Integer> legalMoves;
+    private final HashSet<Integer> visitedStates = new HashSet<>();
+
+    private Board(BoardState state){
+
+        this.initLegalMoves();
+
+        this.state = state;
+
+    }
+
+    public final Board of(){
+        
         List<Integer> range = IntStream.rangeClosed(0, 8)
             .boxed()
             .collect(Collectors.toList());
-        
-        this.board = new ArrayList<>();
-        this.board.add(-1);
-        this.board.addAll(range);
 
+        return new Board(BoardState.of(range));
+    }
+
+    public final Board of(BoardState state){
+        return new Board(state);
+    }
+
+    /**
+     * Initializes a list of legal moves based on the position
+     * @return the array of all legal moves given position
+     */
+    public final void initLegalMoves(){
+        List<ArrayList<Directions>> legalMoves = new ArrayList<>();
+        legalMoves.add(null);
+
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.DOWN, Directions.RIGHT)));
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.LEFT, Directions.DOWN, Directions.RIGHT)));
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.LEFT,Directions.DOWN)));
+        
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.UP, Directions.DOWN, Directions.RIGHT)));
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.UP, Directions.LEFT, Directions.DOWN, Directions.RIGHT)));
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.UP, Directions.LEFT, Directions.DOWN)));
+        
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.UP, Directions.RIGHT)));
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.UP, Directions.LEFT, Directions.RIGHT)));
+        legalMoves.add(new ArrayList<Directions>(Arrays.asList(Directions.UP, Directions.LEFT)));
+
+        this.legalMoves = legalMoves;
     }
 
     //TODO Make a method which takes in a string for the state and sets it as the state
-    public final boolean setBoard(String board){
-        ArrayList<Integer> newBoard = new ArrayList<Integer>();
-        newBoard.add(-1);
-
-        char[] characters = board.toCharArray();
-        for(char c : characters){
-            if(c == 'b')
-                newBoard.add(0);
-            else{
-                newBoard.add(Character.getNumericValue(c));
-            }
-        }
-
-        this.board = newBoard;
-        return true;
+    public final void setState(BoardState state){
+        this.state = state;
     }
 
-
-    public final List<Integer> getBoard(){
-        return this.board;
+    public final BoardState getState(){
+        return this.state;
     }
+
+    // public final List<Integer> getBoard(){
+    //     return this.board;
+    // }
 
     public final int position(){
         return board.indexOf(0);
     }
 
-    @Override
-    public String toString()
-    {
-        StringBuilder builder = new StringBuilder();
-
-        for(int i = 1; i < board.size(); i++)
-        {
-            builder.append(board.get(i) == 0 ? " " : board.get(i));
-            builder.append("   ");
-
-            if(i % 3 == 0)
-            {
-                builder.append(System.getProperty("line.separator"));
-                builder.append(System.getProperty("line.separator"));
-            }
-        }
-
-        return builder.toString();
+    public final ArrayList<Directions> getLegalMoves(int position){
+        return legalMoves.get(position);
     }
 
-    public final List<Directions> getLegalMoves(){
-        int currentPosition = this.position();
-
-        List<Directions> newLegalMoves = new ArrayList<>(Arrays.asList(Directions.values()));
-
-        if(currentPosition % 3 == 1){
-            newLegalMoves.remove(Directions.LEFT);
-        }
-        else if(currentPosition % 3 == 0){
-            newLegalMoves.remove(Directions.RIGHT);
-        }
-        else{
-            //In the middle horizontally
-        }
-
-        if(currentPosition <= 3){
-            newLegalMoves.remove(Directions.UP);
-        }
-        else if(7 <= currentPosition){
-            newLegalMoves.remove(Directions.DOWN);
-        }
-        else{
-            //In the middle vertically.
-        }
-
-        return newLegalMoves;
-    }
-
-    // public final Board getNext(Directions next){
-        
-    // }
-
-    public final HashSet<String> getVisited(){
+    public final HashSet<Integer> getVisited(){
         return this.visitedStates;
     }
 
-    public final void addVisited(String state){
+    public final void addVisited(Integer state){
         this.visitedStates.add(state);
     }
 
-    public final String getState(){
-        return this.board.stream().skip(1).map( n -> n.toString()).collect(Collectors.joining());
-    }
+    // public final String getState(){
+    //     return this.board.stream().skip(1).map( n -> n.toString()).collect(Collectors.joining());
+    // }
 }

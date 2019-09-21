@@ -9,28 +9,29 @@ import eecs.ai.p1.Board;
 import eecs.ai.p1.Directions;
 
 public class Move extends Command {
-    private final EnumMap<Directions, Integer> direction;
+    private final Directions direction;
 
-    private Move(EnumMap<Directions, Integer> direction){
+    private Move(Directions direction){
         this.direction = direction;
         // super(commandList, gameBoard);
     }
 
     public static final Move of(String direction){
-        EnumMap<Directions, Integer> newDirection = new EnumMap<>(Directions.class);
+        // EnumMap<Directions, Integer> newDirection = new EnumMap<>(Directions.class);
+        Directions newDirection;
 
         switch (direction.toLowerCase()){
             case "up":
-                newDirection.put(Directions.UP, -3);
+                newDirection = Directions.UP;
                 break;
             case "down":
-                newDirection.put(Directions.DOWN, 3);
+                newDirection = Directions.DOWN;
                 break;
             case "left":
-                newDirection.put(Directions.LEFT, -1);
+                newDirection = Directions.LEFT;
                 break;
-            case "right":
-                newDirection.put(Directions.RIGHT, 1);
+            default:
+                newDirection = Directions.RIGHT;
                 break;
         }
 
@@ -38,25 +39,29 @@ public class Move extends Command {
     }
 
     public static final Move of(Directions direction){
-        EnumMap<Directions, Integer> newDirection = new EnumMap<>(Directions.class);
-
-        switch (direction){
-            case UP:
-                newDirection.put(Directions.UP, -3);
-                break;
-            case DOWN:
-                newDirection.put(Directions.DOWN, 3);
-                break;
-            case LEFT:
-                newDirection.put(Directions.LEFT, -1);
-                break;
-            case RIGHT:
-                newDirection.put(Directions.RIGHT, 1);
-                break;
-        }
-
-        return new Move(newDirection);
+        return new Move(direction);
     }
+
+    // public static final Move of(Directions direction){
+    //     EnumMap<Directions, Integer> newDirection = new EnumMap<>(Directions.class);
+
+    //     switch (direction){
+    //         case UP:
+    //             newDirection.put(Directions.UP, -3);
+    //             break;
+    //         case DOWN:
+    //             newDirection.put(Directions.DOWN, 3);
+    //             break;
+    //         case LEFT:
+    //             newDirection.put(Directions.LEFT, -1);
+    //             break;
+    //         case RIGHT:
+    //             newDirection.put(Directions.RIGHT, 1);
+    //             break;
+    //     }
+
+    //     return new Move(newDirection);
+    // }
 
     // public static final Move of(){
 
@@ -64,18 +69,14 @@ public class Move extends Command {
 
     @Override
     public final boolean execute(Board board){
-        for(Directions dir : direction.keySet()){
-            if(board.getLegalMoves().contains(dir) && direction.containsKey(dir)){
-                Collections.swap(board.getBoard(), board.position(), board.position() + direction.get(dir));
-                board.addVisited(board.getState());
-                PrintState.of().execute(board);
-                return true;
+        if(board.getLegalMoves(board.getState().getPosition()).contains(direction))
+            if(!board.getVisited().contains(board.getState().peekNext(direction))){
+                Collections.swap(board.getState().getBoardState(), board.getState().getPosition(), board.getState().getPosition() + this.direction.getValue());
+                
+                board.addVisited(board.getState().getBoardState().hashCode());
             }
-            else{
-                //Do nothing, the move is illegal
-            }
-        }
-        return false;
+
+        return true;
     }
 
     // @Override

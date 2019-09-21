@@ -25,10 +25,19 @@ public class RandomizeState extends Command {
     public final boolean execute(Board gameBoard){
 
         for (int i = 0; i < numberMoves; i++){
-            List<Directions> legalMoves = gameBoard.getLegalMoves();
+            ArrayList<Directions> legalMoves = gameBoard.getLegalMoves(gameBoard.getState().getPosition());
+
             Random numberGenerator = new Random();
 
-            Move.of(legalMoves.get(numberGenerator.nextInt(legalMoves.size()))).execute(gameBoard);
+            Move.of(
+                legalMoves.get(
+                    numberGenerator.nextInt(
+                        legalMoves.size()
+                    )
+                )
+            )
+            
+            .execute(gameBoard);
         }
 
         return true;
