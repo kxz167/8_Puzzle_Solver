@@ -69,11 +69,12 @@ public class Move extends Command {
 
     @Override
     public final boolean execute(Board board){
-        if(board.getLegalMoves(board.getState().getPosition()).contains(direction))
-            if(!board.getVisited().contains(board.getState().peekNext(direction))){
+        if(board.getLegalMoves(board.getState().getPosition()).contains(direction)){
+            // if(!board.getVisited().contains(board.getState().peekNext(direction))){
                 Collections.swap(board.getState().getBoardState(), board.getState().getPosition(), board.getState().getPosition() + this.direction.getValue());
                 
-                board.addVisited(board.getState().getBoardState().hashCode());
+                // board.addVisited(board.getState().getBoardState().hashCode());
+                PrintState.of().execute(board);
             }
 
         return true;

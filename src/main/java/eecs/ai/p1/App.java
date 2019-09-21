@@ -10,28 +10,13 @@ import eecs.ai.p1.commands.*;
 public class App {
     public static void main(String[] args) {
 
-        //Create the board
-        Board gameBoard = new Board();
-        PrintState.of().execute(gameBoard);
+        Board newBoard = Board.of();
+        PrintState.of().execute(newBoard);
 
-        // SetState.of("876543210").execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        Move.of("UP").execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        Move.of("Left").execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        Move.of("Right").execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        Move.of("Right").execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        System.out.println(gameBoard.getState());
-        // RandomizeState.of(0).execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        // RandomizeState.of(2).execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        // RandomizeState.of(10).execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
-        // RandomizeState.of(100).execute(gameBoard);
-        // PrintState.of().execute(gameBoard);
+        Move.of(Directions.UP).execute(newBoard);
+        Move.of(Directions.LEFT).execute(newBoard);
+        Move.of(Directions.RIGHT).execute(newBoard);
+        RandomizeState.of(20).execute(newBoard);
+        PrintState.of().execute(newBoard);
     }
 }

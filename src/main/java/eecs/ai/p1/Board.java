@@ -25,7 +25,7 @@ public class Board {
 
     }
 
-    public final Board of(){
+    public static final Board of(){
         
         List<Integer> range = IntStream.rangeClosed(0, 8)
             .boxed()
@@ -34,7 +34,7 @@ public class Board {
         return new Board(BoardState.of(range));
     }
 
-    public final Board of(BoardState state){
+    public static final Board of(BoardState state){
         return new Board(state);
     }
 
