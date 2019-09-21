@@ -100,6 +100,10 @@ public class Board {
         return newLegalMoves;
     }
 
+    // public final Board getNext(Directions next){
+        
+    // }
+
     public final HashSet<String> getVisited(){
         return this.visitedStates;
     }
