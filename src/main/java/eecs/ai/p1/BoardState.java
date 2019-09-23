@@ -7,12 +7,8 @@ import java.util.List;
 public class BoardState{
     private final List<Integer> state;
 
-    private BoardState(List<Integer> state){
-        List<Integer> newState = new ArrayList<Integer>();
-
-        newState.add(-1);
-        newState.addAll(state);
-
+    private BoardState(List<Integer> newState){
+        
         this.state = newState;
     }
 
@@ -22,7 +18,24 @@ public class BoardState{
      * @return
      */
     public static final BoardState of (List<Integer> state){
-        return new BoardState(state);
+
+        List<Integer> newState = new ArrayList<Integer>();
+
+        newState.add(-1);
+        newState.addAll(state);
+
+        return new BoardState(newState);
+    }
+
+    public static final BoardState of (BoardState state, Directions direction){
+        ArrayList<Integer> copy = new ArrayList<Integer>(state.getBoardState().size());
+        for(Integer i : state.getBoardState()){
+            copy.add(Integer.valueOf(i));
+        }
+
+        BoardState returnedState = new BoardState(copy);
+        returnedState.move(direction);
+        return returnedState;
     }
 
     //TODO Return state (list)
@@ -35,13 +48,21 @@ public class BoardState{
     }
 
     public final int peekNext(Directions direction){
-        BoardState nextState = new BoardState(state);
+        ArrayList<Integer> copy = new ArrayList<Integer>(state.size());
+        for(Integer i : state){
+            copy.add(Integer.valueOf(i));
+        }
+
+        BoardState nextState = new BoardState(copy);
         nextState.move(direction);
         return nextState.hashCode();
     }
 
     public void move(Directions direction){
+        // System.out.println("I swap " + direction);
+        // System.out.println(state);
         Collections.swap(state, this.getPosition(), this.getPosition() + direction.getValue());
+        // System.out.println(state);
     }
 
     //TODO Return next legal moves
@@ -51,6 +72,7 @@ public class BoardState{
     //TODO hashcode overrides to use the string's hashcode;
     @Override
     public int hashCode(){
+        // System.out.println(state.toString());
         return state.toString().hashCode();
     }
 

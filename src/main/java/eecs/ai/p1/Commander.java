@@ -1,6 +1,7 @@
 package eecs.ai.p1;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -20,11 +21,9 @@ public final class Commander{
         this.gameBoard = gameBoard;
     }
     
-    public final Commander of(String filename, Board gameBoard){
-        
+    public static final Commander of(String filename) throws FileNotFoundException{
 
-        Scanner fileScanner = new Scanner(filename);
-
+        Scanner fileScanner = new Scanner(new File(filename));
         
         ArrayList<Command> commands = new ArrayList<>();
 
@@ -34,22 +33,44 @@ public final class Commander{
                     commands.add(SetState.of(
                         fileScanner.next() + fileScanner.next() + fileScanner.next()
                     ));
+                    break;
                 case "printState":
                     commands.add(PrintState.of());
+                    break;
                 case "move":
                     commands.add(Move.of(
                         fileScanner.next()
                     ));
-
+                    break;
                 case "randomizeState":
-
+                    commands.add(RandomizeState.of(fileScanner.nextInt()));
+                    break;
                 case "solve":
-
+                    if (fileScanner.next().equals("A-star")){
+                        commands.add(SolveAStar.of(fileScanner.next()));
+                    }
+                    // else if(fileScanner.next().equals("beam")){
+                    //     commands.add(SolveBeam.of(fileScanner.nextInt()));
+                    // }
+                    break;
                 case "maxNodes":
+                    // commands.add(MaxNodes.of(fileScanner.nextInt()));
+                    break;
             }
         }
 
+        fileScanner.close();
+
+        Board gameBoard = Board.of();
+
+        System.out.println(commands);
         return new Commander(commands, gameBoard);
+    }
+
+    public final void execute(){
+        for(Command toDo : commands){
+            toDo.execute(gameBoard);
+        }
     }
 
     // @Override

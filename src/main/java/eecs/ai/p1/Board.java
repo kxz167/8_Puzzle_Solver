@@ -12,6 +12,7 @@ public class Board {
 
     private BoardState state;
     private List<ArrayList<Directions>> legalMoves;
+    private int maxNodes = -1;
 
     private List<Integer> board;
     // private List<Integer> legalMoves;
@@ -66,6 +67,10 @@ public class Board {
         this.state = state;
     }
 
+    public final void setMaxNodes(int maxNodes){
+        this.maxNodes = maxNodes;
+    }
+
     public final BoardState getState(){
         return this.state;
     }
@@ -88,6 +93,10 @@ public class Board {
 
     public final void addVisited(Integer state){
         this.visitedStates.add(state);
+    }
+
+    public final boolean checkVisited(int state){
+        return visitedStates.contains(state);
     }
 
     // public final String getState(){
