@@ -103,7 +103,11 @@ public class SolveAStar extends Command {
 
     @Override
     public final void execute(Board gameBoard) {
-        solve(gameBoard);
+        List<Directions> solution = solve(gameBoard);
+
+        for(Directions direction : solution){
+            Move.of(direction).execute(gameBoard);
+        }
     }
 
     public final int heuristicOne(BoardState state) {

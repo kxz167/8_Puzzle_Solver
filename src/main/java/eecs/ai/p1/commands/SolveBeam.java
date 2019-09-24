@@ -40,10 +40,14 @@ public class SolveBeam extends Command {
 
     @Override
     public final void execute(Board gameBoard) {
-        solveBeam(gameBoard);
+        List<Directions> solution = solve(gameBoard);
+
+        for(Directions direction : solution){
+            Move.of(direction).execute(gameBoard);
+        }
     }
 
-    public final List<Directions> solveBeam(Board currentBoard) {
+    public final List<Directions> solve(Board currentBoard) {
         SearchNode result = loop(currentBoard);
         
         return processSolution(result);
@@ -91,12 +95,10 @@ public class SolveBeam extends Command {
             discoveryQueue.clear();
 
             int finalSize = allPossibilities.size();
-            // System.out.println(finalSize);
 
             for (int i = 0; i < (Math.min(this.k, finalSize)); i++) {
                 discoveryQueue.add(allPossibilities.poll());
             }
-            // System.out.println(discoveryQueue.size());
 
         }
         return null;

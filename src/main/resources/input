@@ -1,1 +1,4 @@
-randomizeState 5 solve beam 20
+randomizeState 5 
+printState
+solve beam 20
+printState

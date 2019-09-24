@@ -53,6 +53,6 @@ public abstract class Command{
         return legalMoves.get(position);
     }
 
-    public void execute(Board board);
+    public abstract void execute(Board board);
     
 }

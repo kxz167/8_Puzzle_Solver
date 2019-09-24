@@ -9,6 +9,7 @@ public class Board {
 
     private BoardState state;
     private Integer maxNodes = null;
+    private Commander commander;
 
     private List<Integer> board;
     private final HashSet<Integer> visitedStates = new HashSet<>();

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 import eecs.ai.p1.commands.*;
@@ -74,12 +75,7 @@ public final class Commander{
         }
     }
 
-    // @Override
-    // public Iterator<Command> iterator() {
-    //     return new Command(this.commands, this.gameBoard);
-    // }
-
-    // public void add (Command command){
-    //     this.commands.add(command);
-    // }
+    public final void addCommands(List<Command> addedCommands){
+        this.commands.addAll(addedCommands);
+    }
 }

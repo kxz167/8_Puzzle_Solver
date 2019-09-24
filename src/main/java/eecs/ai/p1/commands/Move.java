@@ -9,6 +9,7 @@ public class Move extends Command {
     private final Directions direction;
 
     private Move(Directions direction) {
+        initLegalMoves();
         this.direction = direction;
         // super(commandList, gameBoard);
     }

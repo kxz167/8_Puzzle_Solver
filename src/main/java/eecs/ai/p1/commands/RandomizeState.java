@@ -10,8 +10,8 @@ public class RandomizeState extends Command {
 
     private final int numberMoves;
 
-    public RandomizeState(int numberMoves){
-
+    private RandomizeState(int numberMoves){
+        initLegalMoves();
         this.numberMoves = numberMoves;
     }
 
