@@ -10,15 +10,14 @@ public class SetState extends Command {
     private final BoardState state;
 
     private SetState(BoardState state){
-        // super(commandList, gameBoard);
         this.state = state;
     }
 
     public static final SetState of(String state){
+        
         ArrayList<Integer> newState = new ArrayList<Integer>();
-        // newBoard.add(-1);
-
         char[] characters = state.toCharArray();
+
         for(char c : characters){
             if(c == 'b')
                 newState.add(0);
@@ -31,8 +30,7 @@ public class SetState extends Command {
     }
 
     @Override
-    public final boolean execute(Board board){
+    public final void execute(Board board){
         board.setState(this.state);
-        return true;
     }
 }

@@ -1,1 +1,1 @@
-setState b12 345 678 maxNodes 1 solve A-star h1
+randomizeState 5 solve beam 20

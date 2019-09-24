@@ -1,7 +1,6 @@
 package eecs.ai.p1.commands;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import eecs.ai.p1.Board;
@@ -22,10 +21,10 @@ public class RandomizeState extends Command {
 
 
     @Override
-    public final boolean execute(Board gameBoard){
+    public final void execute(Board gameBoard){
 
         for (int i = 0; i < numberMoves; i++){
-            ArrayList<Directions> legalMoves = gameBoard.getLegalMoves(gameBoard.getState().getPosition());
+            ArrayList<Directions> legalMoves = getLegalMoves(gameBoard.getState().getPosition());
 
             Random numberGenerator = new Random();
 
@@ -35,11 +34,7 @@ public class RandomizeState extends Command {
                         legalMoves.size()
                     )
                 )
-            )
-            
-            .execute(gameBoard);
+            ).execute(gameBoard);
         }
-
-        return true;
     }
 }

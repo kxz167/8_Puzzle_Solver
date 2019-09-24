@@ -38,7 +38,6 @@ public class BoardState{
         return returnedState;
     }
 
-    //TODO Return state (list)
     public final List<Integer> getBoardState(){
         return this.state;
     }
@@ -59,23 +58,13 @@ public class BoardState{
     }
 
     public void move(Directions direction){
-        // System.out.println("I swap " + direction);
-        // System.out.println(state);
         Collections.swap(state, this.getPosition(), this.getPosition() + direction.getValue());
-        // System.out.println(state);
     }
 
-    //TODO Return next legal moves
-    
-    //TODO equals override to check if two states are equal; Might not need if using hashset;
-
-    //TODO hashcode overrides to use the string's hashcode;
     @Override
     public int hashCode(){
-        // System.out.println(state.toString());
         return state.toString().hashCode();
     }
-
 
     @Override
     public String toString()
@@ -87,7 +76,7 @@ public class BoardState{
             builder.append(state.get(i) == 0 ? " " : state.get(i));
             builder.append("   ");
 
-            if(i % 3 == 0)
+            if(i == 3 || i == 6)
             {
                 builder.append(System.getProperty("line.separator"));
                 builder.append(System.getProperty("line.separator"));

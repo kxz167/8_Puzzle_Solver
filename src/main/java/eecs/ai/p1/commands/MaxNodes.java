@@ -15,9 +15,8 @@ public class MaxNodes extends Command {
     }
 
     @Override
-    public boolean execute(Board board){
+    public void execute(Board board){
         board.setMaxNodes(maxNodes);
-        return true;
     }
 
 }

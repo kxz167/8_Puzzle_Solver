@@ -2,21 +2,18 @@ package eecs.ai.p1.commands;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.EnumMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import eecs.ai.p1.Board;
-import eecs.ai.p1.CommandType;
+import eecs.ai.p1.BoardState;
 import eecs.ai.p1.Directions;
 
 public abstract class Command{
 
-    private ArrayList<Command> commandList;
-    private int position;
     private List<ArrayList<Directions>> legalMoves;
+    private BoardState goalState;
     
     /**
      * Initializes a list of legal moves based on the position
@@ -41,48 +38,21 @@ public abstract class Command{
         this.legalMoves = legalMoves;
     }
 
+    public final void initGoalState(){
+        List<Integer> goalList = new ArrayList<>();
+        List<Integer> range = IntStream.rangeClosed(0, 8).boxed().collect(Collectors.toList());
+        goalList.addAll(range);
+        this.goalState = BoardState.of(goalList);
+    }
+
+    public final BoardState getGoalState(){
+        return this.goalState;
+    }
+
     public final ArrayList<Directions> getLegalMoves(int position){
         return legalMoves.get(position);
     }
 
-    // protected final Board gameBoard;
-    // public Command(ArrayList<Command> commandList, Board gameBoard){
-    //     this.commandList = commandList;
-    //     this.gameBoard = gameBoard;
-    // }
-
-    // public static final Command of (String inputs){
-    //     // return constructor.get()
-
-    //     final EnumMap<CommandType, Function<String, Command>> myConstructor = new EnumMap<>(Map.of(
-    //             CommandType.MOVE, inputs -> new Move(inputs),
-    //             CommandType.PRINTSTATE, inputs-> new PrintState(),
-    //             CommandType.RANDOMIZESTATE, inputs -> new RandomizeState(inputs),
-    //             CommandType.SETSTATE, inputs -> new SetState(inputs),
-    //             CommandType.SOLVEASTAR, inputs -> new SolveAStar(inputs),
-    //             CommandType.SOLVEBEAM, inputs -> new SolveBeam(inputs)
-    //         ));
-
-    // }
-
-    public boolean execute(Board board){
-        return true;
-    }
+    public void execute(Board board);
     
-    // @Override
-    // public boolean hasNext(){
-    //     if(position < commandList.size())
-    //         return true;
-    //     else{
-    //         return false;
-    //     }
-    // }
-
-    // @Override
-    // public Command next(){
-
-    //     Command nextCommand = commandList.get(position++);
-    //     return nextCommand;
-    // }
-
 }

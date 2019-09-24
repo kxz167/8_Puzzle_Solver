@@ -1,13 +1,11 @@
 package eecs.ai.p1.commands;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Stack;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import eecs.ai.p1.Board;
 import eecs.ai.p1.BoardState;
@@ -17,10 +15,6 @@ import eecs.ai.p1.SearchNode;
 public class SolveBeam extends Command {
 
     private final int k;
-
-    private final List<Command> moves = new ArrayList<>();
-
-    private final BoardState goalState;
 
     private final Comparator<SearchNode> comparer = new Comparator<SearchNode>() {
         @Override
@@ -34,14 +28,7 @@ public class SolveBeam extends Command {
 
     private SolveBeam(int k) {
         initLegalMoves();
-
-        List<Integer> goalList = new ArrayList<>();
-        // goalList.add(-1);
-
-        List<Integer> range = IntStream.rangeClosed(0, 8).boxed().collect(Collectors.toList());
-
-        goalList.addAll(range);
-        this.goalState = BoardState.of(goalList);
+        initGoalState();
 
         this.k = k;
     }
@@ -52,46 +39,36 @@ public class SolveBeam extends Command {
     }
 
     @Override
-    public final boolean execute(Board gameBoard) {
+    public final void execute(Board gameBoard) {
         solveBeam(gameBoard);
-        return true;
     }
 
     public final List<Directions> solveBeam(Board currentBoard) {
-        // begin at the first direction
-        List<Directions> solutionDirection = new ArrayList<Directions>();
-        Stack<SearchNode> solution = new Stack<>();
-        BoardState state = currentBoard.getState();
-        SearchNode firstNode = new SearchNode(null, state, null, 0);
+        SearchNode result = loop(currentBoard);
+        
+        return processSolution(result);
+    }
 
-        SearchNode finalNode = new SearchNode(null, null, null, 0);
-
-        discoveryQueue.add(firstNode);
-
-        //Can be null
+    private final SearchNode loop(Board currentBoard){
         Integer count = currentBoard.getMaxNodes();
 
-        DISCOVERY: 
+        SearchNode currentNode = new SearchNode(null, currentBoard.getState(), null, 0);
+        discoveryQueue.add(currentNode);
+
         while (!discoveryQueue.isEmpty()) {
 
             Queue<SearchNode> allPossibilities = new PriorityQueue<>(comparer);
 
             for (SearchNode node : discoveryQueue) {
 
-                // Prepare for searching
                 BoardState currentState = node.getCurrentState();
-
                 currentBoard.addVisited(currentState.hashCode());
 
-
-                if (currentState.hashCode() == goalState.hashCode()){
-                    // System.out.println(currentState);
-                    finalNode = node;
-                    break DISCOVERY;
-                }
+                if (currentState.hashCode() == getGoalState().hashCode())
+                    return node;
 
                 if(count != null && --count < 0)
-                        break DISCOVERY;
+                    return node;
 
                     
                 // Discover what is to be searched
@@ -101,7 +78,12 @@ public class SolveBeam extends Command {
 
                     if (!currentBoard.checkVisited(currentState.peekNext(move))) {
                         allPossibilities.add(
-                                new SearchNode(move, BoardState.of(currentState, move), node, node.getNextPathCost()));
+                                new SearchNode(move, 
+                                                BoardState.of(currentState, move), 
+                                                node, 
+                                                node.getNextPathCost()
+                                            )
+                        );
                     }
                 }
             }
@@ -117,21 +99,26 @@ public class SolveBeam extends Command {
             // System.out.println(discoveryQueue.size());
 
         }
+        return null;
+    }
 
-        while(finalNode.hasPrevious()){
-            solution.push(finalNode);
-            finalNode = finalNode.getPreviousNode();
+    private final List<Directions> processSolution(SearchNode finalNode) {
+
+        List<Directions> solutionDirection = new ArrayList<Directions>();
+        SearchNode consideredNode = finalNode;
+
+        if(finalNode != null){
+            while (consideredNode.hasPrevious()) {
+                solutionDirection.add(consideredNode.getTraveleDirections());
+                consideredNode = consideredNode.getPreviousNode();
+            }
+    
+            Collections.reverse(solutionDirection);
         }
         
-        while(!solution.isEmpty()){
-            solutionDirection.add(solution.pop().getTraveleDirections());
-        }
-
         System.out.println(solutionDirection);
 
         return solutionDirection;
-
-
     }
 
     public final int heuristic(BoardState state) {
@@ -142,9 +129,8 @@ public class SolveBeam extends Command {
             int moveCount = 0;
             int difference = 0;
 
-            if (consideredState.get(i) != 0) {
+            if (consideredState.get(i) != 0)
                 difference = Math.abs((consideredState.get(i) + 1) - i);
-            }
 
             while (difference != 0) {
                 if (difference >= 3) {

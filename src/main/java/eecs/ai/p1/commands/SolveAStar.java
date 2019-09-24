@@ -1,13 +1,11 @@
 package eecs.ai.p1.commands;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Stack;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import eecs.ai.p1.Board;
 import eecs.ai.p1.BoardState;
@@ -17,12 +15,10 @@ import eecs.ai.p1.SearchNode;
 public class SolveAStar extends Command {
 
     private final int heuristic;
-    private final List<Command> moves = new ArrayList<>();
-    private final BoardState goalState;
 
-    //Discovery queue for processing.
+    // Discovery queue for processing.
     private final Queue<SearchNode> discoveryQueue = new PriorityQueue<SearchNode>(new Comparator<SearchNode>() {
-        //Override the comparator based on the heuristic
+        // Override the comparator based on the heuristic
         @Override
         public int compare(SearchNode o1, SearchNode o2) {
             if (heuristic == 1)
@@ -33,19 +29,15 @@ public class SolveAStar extends Command {
                     - (heuristicTwo(o2.getCurrentState()) + o2.getPathCost());
         }
     });
-    
+
     private SolveAStar(int heuristic) {
         this.heuristic = heuristic;
 
         initLegalMoves();
-
-        //Possibly enable this in command
-        List<Integer> goalList = IntStream.rangeClosed(0, 8).boxed().collect(Collectors.toList());
-        this.goalState = BoardState.of(goalList);
+        initGoalState();
 
     }
-    
-    
+
     public static final SolveAStar of(String heuristic) {
         if (heuristic.equals("h1")) {
             return new SolveAStar(1);
@@ -55,29 +47,28 @@ public class SolveAStar extends Command {
     }
 
     public final List<Directions> solve(Board currentBoard) {
-
+        SearchNode result = loop(currentBoard);
         
-        BoardState state = currentBoard.getState();
-        SearchNode firstNode = new SearchNode(null, state, null, 0);
+        return processSolution(result);
+    }
+
+    private final SearchNode loop(Board currentBoard){
         Integer count = currentBoard.getMaxNodes();
+        
+        SearchNode currentNode = new SearchNode(null, currentBoard.getState(), null, 0);
+        discoveryQueue.add(currentNode);
 
-
-        discoveryQueue.add(firstNode);
-        SearchNode currentNode = discoveryQueue.peek();
-
-        DISCOVERY: 
-        while (!discoveryQueue.isEmpty()){
+        while (!discoveryQueue.isEmpty()) {
             currentNode = discoveryQueue.poll();
 
             BoardState currentState = currentNode.getCurrentState();
             currentBoard.addVisited(currentState.hashCode());
 
-            if (currentState.hashCode() == goalState.hashCode()) {
-                break DISCOVERY;
+            if (currentState.hashCode() == getGoalState().hashCode()) {
+                return currentNode;
             }
             if (count != null && --count < 0)
-                break DISCOVERY;
-
+                return null;
 
             List<Directions> nextMoves = this.getLegalMoves(currentState.getPosition());
             for (Directions move : nextMoves) {
@@ -88,38 +79,31 @@ public class SolveAStar extends Command {
             }
         }
 
-        return processSolution(currentNode);
-
+        return null;
     }
 
-    private final List<Directions> processSolution(SearchNode finalNode){
+    private final List<Directions> processSolution(SearchNode finalNode) {
 
         List<Directions> solutionDirection = new ArrayList<Directions>();
-        Stack<SearchNode> solution = new Stack<>();
+        SearchNode consideredNode = finalNode;
 
-        while (finalNode.hasPrevious()) {
-            solution.push(finalNode);
-            finalNode = finalNode.getPreviousNode();
+        if(finalNode != null){
+            while (consideredNode.hasPrevious()) {
+                solutionDirection.add(consideredNode.getTraveleDirections());
+                consideredNode = consideredNode.getPreviousNode();
+            }
+    
+            Collections.reverse(solutionDirection);
         }
-
-        while (!solution.isEmpty()) {
-            solutionDirection.add(solution.pop().getTraveleDirections());
-        }
-
+        
         System.out.println(solutionDirection);
 
         return solutionDirection;
-
     }
 
     @Override
-    public final boolean execute(Board gameBoard) {
-        //Get list of moves
+    public final void execute(Board gameBoard) {
         solve(gameBoard);
-
-        //Print out the list
-
-        return true;
     }
 
     public final int heuristicOne(BoardState state) {
