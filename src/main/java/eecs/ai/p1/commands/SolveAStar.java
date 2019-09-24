@@ -22,6 +22,9 @@ public class SolveAStar extends Command {
     private final Queue<SearchNode> discoveryQueue = new PriorityQueue<SearchNode>(new Comparator<SearchNode>() {
         @Override
         public int compare(SearchNode o1, SearchNode o2){
+            if(heuristic == 1)
+                return (heuristicOne(o1.getCurrentState()) + o1.getPathCost()) - (heuristicOne(o2.getCurrentState()) + o2.getPathCost());
+            
             return (heuristicTwo(o1.getCurrentState()) + o1.getPathCost()) - (heuristicTwo(o2.getCurrentState()) + o2.getPathCost());
         }
     });
@@ -41,6 +44,9 @@ public class SolveAStar extends Command {
 
         goalList.addAll(range);
         this.goalState = BoardState.of(goalList);
+
+
+
     }
 
     public static final SolveAStar of(String heuristic){
@@ -61,11 +67,8 @@ public class SolveAStar extends Command {
 
     public final List<Directions> solveH2(Board currentBoard){
         List<Directions> solutionDirection = new ArrayList<Directions>();
-
         Stack<SearchNode> solution = new Stack<>();
-
         BoardState state = currentBoard.getState();
-
         SearchNode firstNode = new SearchNode(null, state, null, 0);
 
         // boolean goalReached = false;
@@ -127,6 +130,8 @@ public class SolveAStar extends Command {
             // count --;
         }
 
+        //TODO THis will run regardless of a solution or not
+
         while(currentNode.hasPrevious()){
             solution.push(currentNode);
             currentNode = currentNode.getPreviousNode();
@@ -163,6 +168,7 @@ public class SolveAStar extends Command {
     // }
 
     public final int heuristicTwo(BoardState state){
+        // System.out.println("USE H2");
         List<Integer> consideredState = state.getBoardState();
 
         int sumMoves = 0;
@@ -197,5 +203,21 @@ public class SolveAStar extends Command {
         // System.out.println(state);
         // System.out.println(state.hashCode() + " Sum Moves: " + sumMoves);
         return sumMoves;
+    }
+
+    public final int heuristicOne(BoardState state){
+        // System.out.println("USE H1");
+        List<Integer> consideredState = state.getBoardState();
+
+        int sumMissplaced = 0;
+
+        for(int i = 1; i < consideredState.size(); i++){
+            int consideredValue = consideredState.get(i);
+
+            if(consideredValue != i - 1 && consideredValue != 0)
+                sumMissplaced ++;
+        }
+
+        return sumMissplaced;
     }
 }

@@ -46,12 +46,13 @@ public final class Commander{
                     commands.add(RandomizeState.of(fileScanner.nextInt()));
                     break;
                 case "solve":
-                    if (fileScanner.next().equals("A-star")){
+                    String next = fileScanner.next();
+                    if (next.equals("A-star")){
                         commands.add(SolveAStar.of(fileScanner.next()));
                     }
-                    // else if(fileScanner.next().equals("beam")){
-                    //     commands.add(SolveBeam.of(fileScanner.nextInt()));
-                    // }
+                    else if(next.equals("beam")){
+                        commands.add(SolveBeam.of(fileScanner.nextInt()));
+                    }
                     break;
                 case "maxNodes":
                     // commands.add(MaxNodes.of(fileScanner.nextInt()));
