@@ -20,7 +20,9 @@ public class SolveAStar extends Command {
     private final List<Command> moves = new ArrayList<>();
     private final BoardState goalState;
 
+    //Discovery queue for processing.
     private final Queue<SearchNode> discoveryQueue = new PriorityQueue<SearchNode>(new Comparator<SearchNode>() {
+        //Override the comparator based on the heuristic
         @Override
         public int compare(SearchNode o1, SearchNode o2) {
             if (heuristic == 1)
@@ -31,19 +33,19 @@ public class SolveAStar extends Command {
                     - (heuristicTwo(o2.getCurrentState()) + o2.getPathCost());
         }
     });
-
+    
     private SolveAStar(int heuristic) {
         this.heuristic = heuristic;
 
         initLegalMoves();
 
-        List<Integer> goalList = new ArrayList<>();
-        List<Integer> range = IntStream.rangeClosed(0, 8).boxed().collect(Collectors.toList());
-        goalList.addAll(range);
-
+        //Possibly enable this in command
+        List<Integer> goalList = IntStream.rangeClosed(0, 8).boxed().collect(Collectors.toList());
         this.goalState = BoardState.of(goalList);
-    }
 
+    }
+    
+    
     public static final SolveAStar of(String heuristic) {
         if (heuristic.equals("h1")) {
             return new SolveAStar(1);
@@ -52,17 +54,9 @@ public class SolveAStar extends Command {
         }
     }
 
-    @Override
-    public final boolean execute(Board gameBoard) {
-        solveH2(gameBoard);
+    public final List<Directions> solve(Board currentBoard) {
 
-        return true;
-    }
-
-    public final List<Directions> solveH2(Board currentBoard) {
-
-        List<Directions> solutionDirection = new ArrayList<Directions>();
-        Stack<SearchNode> solution = new Stack<>();
+        
         BoardState state = currentBoard.getState();
         SearchNode firstNode = new SearchNode(null, state, null, 0);
         Integer count = currentBoard.getMaxNodes();
@@ -71,7 +65,8 @@ public class SolveAStar extends Command {
         discoveryQueue.add(firstNode);
         SearchNode currentNode = discoveryQueue.peek();
 
-        DISCOVERY: while (!discoveryQueue.isEmpty()){
+        DISCOVERY: 
+        while (!discoveryQueue.isEmpty()){
             currentNode = discoveryQueue.poll();
 
             BoardState currentState = currentNode.getCurrentState();
@@ -93,11 +88,18 @@ public class SolveAStar extends Command {
             }
         }
 
-        // TODO THis will run regardless of a solution or not
+        return processSolution(currentNode);
 
-        while (currentNode.hasPrevious()) {
-            solution.push(currentNode);
-            currentNode = currentNode.getPreviousNode();
+    }
+
+    private final List<Directions> processSolution(SearchNode finalNode){
+
+        List<Directions> solutionDirection = new ArrayList<Directions>();
+        Stack<SearchNode> solution = new Stack<>();
+
+        while (finalNode.hasPrevious()) {
+            solution.push(finalNode);
+            finalNode = finalNode.getPreviousNode();
         }
 
         while (!solution.isEmpty()) {
@@ -108,6 +110,16 @@ public class SolveAStar extends Command {
 
         return solutionDirection;
 
+    }
+
+    @Override
+    public final boolean execute(Board gameBoard) {
+        //Get list of moves
+        solve(gameBoard);
+
+        //Print out the list
+
+        return true;
     }
 
     public final int heuristicOne(BoardState state) {
