@@ -68,6 +68,9 @@ public class SolveBeam extends Command {
 
         discoveryQueue.add(firstNode);
 
+        //Can be null
+        Integer count = currentBoard.getMaxNodes();
+
         DISCOVERY: 
         while (!discoveryQueue.isEmpty()) {
 
@@ -80,17 +83,22 @@ public class SolveBeam extends Command {
 
                 currentBoard.addVisited(currentState.hashCode());
 
+
                 if (currentState.hashCode() == goalState.hashCode()){
-                    System.out.println(currentState);
+                    // System.out.println(currentState);
                     finalNode = node;
                     break DISCOVERY;
                 }
+
+                if(count != null && --count < 0)
+                        break DISCOVERY;
 
                     
                 // Discover what is to be searched
                 List<Directions> nextMoves = this.getLegalMoves(currentState.getPosition());
 
                 for (Directions move : nextMoves) {
+
                     if (!currentBoard.checkVisited(currentState.peekNext(move))) {
                         allPossibilities.add(
                                 new SearchNode(move, BoardState.of(currentState, move), node, node.getNextPathCost()));
@@ -101,12 +109,13 @@ public class SolveBeam extends Command {
             discoveryQueue.clear();
 
             int finalSize = allPossibilities.size();
-            System.out.println(finalSize);
+            // System.out.println(finalSize);
 
             for (int i = 0; i < (Math.min(this.k, finalSize)); i++) {
                 discoveryQueue.add(allPossibilities.poll());
             }
             // System.out.println(discoveryQueue.size());
+
         }
 
         while(finalNode.hasPrevious()){

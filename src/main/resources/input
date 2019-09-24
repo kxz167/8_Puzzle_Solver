@@ -1,1 +1,1 @@
-setState 24b 158 376 solve beam 10
+setState b12 345 678 maxNodes 1 solve A-star h1

@@ -55,7 +55,7 @@ public final class Commander{
                     }
                     break;
                 case "maxNodes":
-                    // commands.add(MaxNodes.of(fileScanner.nextInt()));
+                    commands.add(MaxNodes.of(fileScanner.nextInt()));
                     break;
             }
         }

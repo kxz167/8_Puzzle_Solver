@@ -10,7 +10,7 @@ public class MaxNodes extends Command {
         this.maxNodes = maxNodes;
     }
 
-    private final MaxNodes of (int max){
+    public static final MaxNodes of (int max){
         return new MaxNodes(max);
     }
 

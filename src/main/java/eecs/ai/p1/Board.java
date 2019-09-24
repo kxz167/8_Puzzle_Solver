@@ -12,7 +12,7 @@ public class Board {
 
     private BoardState state;
     private List<ArrayList<Directions>> legalMoves;
-    private int maxNodes = -1;
+    private Integer maxNodes = null;
 
     private List<Integer> board;
     // private List<Integer> legalMoves;
@@ -69,6 +69,10 @@ public class Board {
 
     public final void setMaxNodes(int maxNodes){
         this.maxNodes = maxNodes;
+    }
+
+    public final Integer getMaxNodes(){
+        return this.maxNodes;
     }
 
     public final BoardState getState(){
