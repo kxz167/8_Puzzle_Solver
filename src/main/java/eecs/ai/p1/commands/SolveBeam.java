@@ -10,11 +10,13 @@ import java.util.Queue;
 import eecs.ai.p1.Board;
 import eecs.ai.p1.BoardState;
 import eecs.ai.p1.Directions;
+import eecs.ai.p1.Run;
 import eecs.ai.p1.SearchNode;
 
 public class SolveBeam extends Command {
 
     private final int k;
+    private int nodesGenerated = 0;
 
     private final Comparator<SearchNode> comparer = new Comparator<SearchNode>() {
         @Override
@@ -40,14 +42,37 @@ public class SolveBeam extends Command {
 
     @Override
     public final void execute(Board gameBoard) {
+        gameBoard.getVisited().clear();
         List<Directions> solution = solve(gameBoard);
 
-        for(Directions direction : solution){
-            Move.of(direction).execute(gameBoard);
+        int solutionSize = 0;
+
+        if(solution != null){
+            solutionSize = solution.size();
         }
+
+        if(gameBoard.toPrint()){
+            System.out.println("Solve beam: " + k);
+            if(solution != null){
+                System.out.println("Solution of length: " + solutionSize);
+                System.out.println(solution);
+            }
+            else{
+                System.out.println("No solution was found with given conditions");
+            }
+        }
+
+        if(solution != null){
+            for(Directions direction : solution){
+                Move.of(direction).execute(gameBoard);
+            }
+        }
+
+        gameBoard.getAnalysis().add(Run.of("Beam", solution != null, nodesGenerated , solutionSize));
     }
 
     public final List<Directions> solve(Board currentBoard) {
+        
         SearchNode result = loop(currentBoard);
         
         return processSolution(result);
@@ -81,6 +106,8 @@ public class SolveBeam extends Command {
                 for (Directions move : nextMoves) {
 
                     if (!currentBoard.checkVisited(currentState.peekNext(move))) {
+                        nodesGenerated++;
+
                         allPossibilities.add(
                                 new SearchNode(move, 
                                                 BoardState.of(currentState, move), 
@@ -106,10 +133,11 @@ public class SolveBeam extends Command {
 
     private final List<Directions> processSolution(SearchNode finalNode) {
 
-        List<Directions> solutionDirection = new ArrayList<Directions>();
+        List<Directions> solutionDirection = null;
         SearchNode consideredNode = finalNode;
 
         if(finalNode != null){
+            solutionDirection = new ArrayList<Directions>();
             while (consideredNode.hasPrevious()) {
                 solutionDirection.add(consideredNode.getTraveleDirections());
                 consideredNode = consideredNode.getPreviousNode();
@@ -117,8 +145,6 @@ public class SolveBeam extends Command {
     
             Collections.reverse(solutionDirection);
         }
-        
-        System.out.println(solutionDirection);
 
         return solutionDirection;
     }

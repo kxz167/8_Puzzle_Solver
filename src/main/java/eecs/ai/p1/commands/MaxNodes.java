@@ -16,6 +16,8 @@ public class MaxNodes extends Command {
 
     @Override
     public void execute(Board board){
+        if(board.toPrint())
+            System.out.println("MaxNodes: "+ maxNodes);
         board.setMaxNodes(maxNodes);
     }
 

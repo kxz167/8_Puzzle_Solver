@@ -1,0 +1,14 @@
+randomizeState 1
+solve A-star h2
+randomizeState 2
+solve A-star h2
+randomizeState 3
+solve A-star h2
+randomizeState 5
+solve A-star h2
+randomizeState 9
+solve A-star h2
+randomizeState 10
+solve A-star h2
+randomizeState 50
+solve A-star h2

@@ -11,11 +11,8 @@ import eecs.ai.p1.commands.*;
 
 //implements Iterable<Command>
 public final class Commander{
-    // private final File filename;
     private final ArrayList<Command> commands;
     private final Board gameBoard;
-
-    
 
     private Commander (ArrayList<Command> commands, Board gameBoard){
         this.commands = commands;
@@ -58,6 +55,8 @@ public final class Commander{
                 case "maxNodes":
                     commands.add(MaxNodes.of(fileScanner.nextInt()));
                     break;
+                case"recorder":
+                    commands.add(EnableRecorder.of());
             }
         }
 
@@ -65,7 +64,7 @@ public final class Commander{
 
         Board gameBoard = Board.of();
 
-        System.out.println(commands);
+        // System.out.println(commands);
         return new Commander(commands, gameBoard);
     }
 
@@ -73,9 +72,15 @@ public final class Commander{
         for(Command toDo : commands){
             toDo.execute(gameBoard);
         }
+
+        if(!this.gameBoard.toPrint()){
+            this.gameBoard.getAnalysis().searchCost();
+            this.gameBoard.getAnalysis().searchSuccessRate();
+        }
     }
 
     public final void addCommands(List<Command> addedCommands){
         this.commands.addAll(addedCommands);
     }
+
 }

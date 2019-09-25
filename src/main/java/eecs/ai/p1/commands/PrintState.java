@@ -14,6 +14,7 @@ public class PrintState extends Command {
     
     @Override
     public final void execute(Board gameBoard){
-        System.out.println("- - - - - - - -" + System.getProperty("line.separator") + gameBoard.getState() + System.getProperty("line.separator") + "- - - - - - - -");
+        System.out.println("PrintState:");
+        System.out.println(gameBoard.getState());
     }
 }

@@ -10,11 +10,13 @@ import java.util.Queue;
 import eecs.ai.p1.Board;
 import eecs.ai.p1.BoardState;
 import eecs.ai.p1.Directions;
+import eecs.ai.p1.Run;
 import eecs.ai.p1.SearchNode;
 
 public class SolveAStar extends Command {
 
     private final int heuristic;
+    private int nodesGenerated = 0;
 
     // Discovery queue for processing.
     private final Queue<SearchNode> discoveryQueue = new PriorityQueue<SearchNode>(new Comparator<SearchNode>() {
@@ -38,7 +40,7 @@ public class SolveAStar extends Command {
 
     }
 
-    public static final SolveAStar of(String heuristic) {
+    public static SolveAStar of(String heuristic) {
         if (heuristic.equals("h1")) {
             return new SolveAStar(1);
         } else {
@@ -73,6 +75,8 @@ public class SolveAStar extends Command {
             List<Directions> nextMoves = this.getLegalMoves(currentState.getPosition());
             for (Directions move : nextMoves) {
                 if (!currentBoard.checkVisited(currentState.peekNext(move))) {
+                    nodesGenerated ++;
+
                     discoveryQueue.add(new SearchNode(move, BoardState.of(currentState, move), currentNode,
                             currentNode.getNextPathCost()));
                 }
@@ -84,10 +88,11 @@ public class SolveAStar extends Command {
 
     private final List<Directions> processSolution(SearchNode finalNode) {
 
-        List<Directions> solutionDirection = new ArrayList<Directions>();
+        List<Directions> solutionDirection = null;
         SearchNode consideredNode = finalNode;
 
         if(finalNode != null){
+            solutionDirection = new ArrayList<Directions>();
             while (consideredNode.hasPrevious()) {
                 solutionDirection.add(consideredNode.getTraveleDirections());
                 consideredNode = consideredNode.getPreviousNode();
@@ -96,18 +101,38 @@ public class SolveAStar extends Command {
             Collections.reverse(solutionDirection);
         }
         
-        System.out.println(solutionDirection);
-
         return solutionDirection;
     }
 
     @Override
     public final void execute(Board gameBoard) {
+        gameBoard.getVisited().clear();
         List<Directions> solution = solve(gameBoard);
+        int solutionSize = 0;
 
-        for(Directions direction : solution){
-            Move.of(direction).execute(gameBoard);
+        if(solution != null){
+            solutionSize = solution.size();
         }
+
+        if(gameBoard.toPrint()){
+            System.out.println("Solve A-star h" + heuristic);
+            if(solution != null){
+                System.out.println("Solution of length: " + solutionSize);
+                System.out.println(solution);
+            }
+            else{
+                System.out.println("No solution was found");
+            }
+        }
+
+        if(solution != null){
+            for(Directions direction : solution){
+                Move.of(direction).execute(gameBoard);
+            }
+        }
+        
+        
+        gameBoard.getAnalysis().add(Run.of("A-star h" + heuristic, solution != null, nodesGenerated , solutionSize));
     }
 
     public final int heuristicOne(BoardState state) {

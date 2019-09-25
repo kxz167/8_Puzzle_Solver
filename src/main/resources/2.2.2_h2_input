@@ -1,0 +1,8 @@
+randomizeState 5
+maxNodes 3
+solve A-star h2
+maxNodes 5
+solve A-star h2
+setState 123 456 880
+printState
+solve A-star h2

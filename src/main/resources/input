@@ -1,4 +1,0 @@
-randomizeState 5 
-printState
-solve beam 20
-printState

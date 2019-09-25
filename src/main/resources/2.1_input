@@ -1,0 +1,8 @@
+printState
+move up
+move left
+move down
+move right
+randomizeState 5
+setState b12 345 678
+printState

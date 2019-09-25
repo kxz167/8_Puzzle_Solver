@@ -37,5 +37,10 @@ public class Move extends Command {
             Collections.swap(board.getState().getBoardState(), board.getState().getPosition(),
                     board.getState().getPosition() + this.direction.getValue());
         }
+
+        if(board.toPrint()){
+            System.out.println("Move: " + this.direction);
+            System.out.println(board.getState());
+        }
     }
 }

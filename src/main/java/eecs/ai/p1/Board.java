@@ -9,13 +9,16 @@ public class Board {
 
     private BoardState state;
     private Integer maxNodes = null;
-    private Commander commander;
+    private boolean print = true;
+    
+    private final Recorder analysis;
 
     private List<Integer> board;
     private final HashSet<Integer> visitedStates = new HashSet<>();
 
     private Board(BoardState state){
         this.state = state;
+        this.analysis = Recorder.of();
     }
 
     public static final Board of(){
@@ -47,13 +50,17 @@ public class Board {
         return this.maxNodes;
     }
 
+    public final boolean toPrint(){
+        return print;
+    }
 
+    public final void record(){
+        this.print = false;
+    }
 
     public final int position(){
         return board.indexOf(0);
     }
-
-
 
     public final void addVisited(Integer state){
         this.visitedStates.add(state);
@@ -65,6 +72,11 @@ public class Board {
 
     public final boolean checkVisited(int state){
         return visitedStates.contains(state);
+    }
+
+    
+    public Recorder getAnalysis() {
+        return this.analysis;
     }
 
 }

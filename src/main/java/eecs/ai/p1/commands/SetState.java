@@ -8,9 +8,11 @@ import eecs.ai.p1.BoardState;
 public class SetState extends Command {
 
     private final BoardState state;
+    private final String stringState;
 
-    private SetState(BoardState state){
+    private SetState(BoardState state, String stringState){
         this.state = state;
+        this.stringState = stringState;
     }
 
     public static final SetState of(String state){
@@ -26,11 +28,13 @@ public class SetState extends Command {
             }
         }
 
-        return new SetState(BoardState.of(newState));
+        return new SetState(BoardState.of(newState), state);
     }
 
     @Override
     public final void execute(Board board){
+        if(board.toPrint())
+            System.out.println("SetState: " + stringState);
         board.setState(this.state);
     }
 }
