@@ -17,7 +17,6 @@ public abstract class Command{
     
     /**
      * Initializes a list of legal moves based on the position
-     * @return the array of all legal moves given position
      */
     public final void initLegalMoves(){
         List<ArrayList<Directions>> legalMoves = new ArrayList<>();
@@ -38,6 +37,10 @@ public abstract class Command{
         this.legalMoves = legalMoves;
     }
 
+
+    /**
+     * Initializes the reference goal state for use within commands
+     */
     public final void initGoalState(){
         List<Integer> goalList = new ArrayList<>();
         List<Integer> range = IntStream.rangeClosed(0, 8).boxed().collect(Collectors.toList());
@@ -45,14 +48,26 @@ public abstract class Command{
         this.goalState = BoardState.of(goalList);
     }
 
+    //TODO Move these to board?
+
+    /**
+     * Accessor for the goal state of the 8-puzzle
+     * @return the BoardState representing the goal state
+     */
     public final BoardState getGoalState(){
         return this.goalState;
     }
 
+    /**
+     * Get the possible legal moves given the board position
+     * @param position
+     * @return
+     */
     public final ArrayList<Directions> getLegalMoves(int position){
         return legalMoves.get(position);
     }
 
+    //Method requirement for execute method.
     public abstract void execute(Board board);
     
 }

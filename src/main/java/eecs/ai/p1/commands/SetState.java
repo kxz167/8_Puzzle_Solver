@@ -15,6 +15,11 @@ public class SetState extends Command {
         this.stringState = stringState;
     }
 
+    /**
+     * Builds a SetState command based off a string state
+     * @param state The string input which determines what the state is.
+     * @return The newly created SetState command.
+     */
     public static final SetState of(String state){
         
         ArrayList<Integer> newState = new ArrayList<Integer>();
@@ -31,10 +36,16 @@ public class SetState extends Command {
         return new SetState(BoardState.of(newState), state);
     }
 
+
+    /**
+     * Execution override to execute the SetState command on the board.
+     * Delegates function to the board and prints out the command
+     */
     @Override
     public final void execute(Board board){
         if(board.toPrint())
             System.out.println("SetState: " + stringState);
+            
         board.setState(this.state);
     }
 }

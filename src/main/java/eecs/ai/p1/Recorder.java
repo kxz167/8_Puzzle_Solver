@@ -1,7 +1,6 @@
 package eecs.ai.p1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.TreeMap;
 import java.util.stream.Stream;
@@ -15,10 +14,18 @@ public class Recorder {
 
     }
 
+    /**
+     * Builds a new recorder which handles and holds statistical information about runs
+     * @return The new built recorder.
+     */
     public static final Recorder of() {
         return new Recorder();
     }
 
+    /**
+     * Search cost runs through the information that had been input and prints out the step sizes, average nodes generated
+     * as well as the number of runs (sample size)
+     */
     public final void searchCost() {
         recordedAStarH1.forEach((steps, runs) ->{
             int sum = 0;
@@ -49,6 +56,9 @@ public class Recorder {
         });
     }
 
+    /**
+     * Runs through and determines the failure rate for each possible search algorithm.
+     */
     public void searchSuccessRate(){
         final int[] failures = {0,0,0};
         final int[] totalRuns = {0,0,0};
@@ -86,6 +96,11 @@ public class Recorder {
         System.out.println("Failures in beam: " + failures[2] + ", fraction of: " + (double)failures[2] / totalRuns[2] + " failure rate");
     }
 
+
+    /**
+     * Method utilized by search algorithms to add a run
+     * @param recordedRun The run datatype that holds information about a given execution of a search algorithm
+     */
     public final void add(Run recordedRun) {
         switch (recordedRun.getType()) {
         case "A-star h1":
@@ -99,6 +114,11 @@ public class Recorder {
         }
     }
 
+    /**
+     * Moves runs onto the correct tree to be stored and parsed later.
+     * @param target The target tree, whether for beam, or which heuristic
+     * @param run The run to be added onto the tree.
+     */
     private final void initStarter(TreeMap<Integer, List<Run>> target, Run run) {
         List<Run> targetList = target.get(run.getNumSteps());
         if (targetList == null) {

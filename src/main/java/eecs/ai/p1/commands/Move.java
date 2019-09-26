@@ -3,6 +3,7 @@ package eecs.ai.p1.commands;
 import java.util.Collections;
 
 import eecs.ai.p1.Board;
+import eecs.ai.p1.BoardState;
 import eecs.ai.p1.Directions;
 
 public class Move extends Command {
@@ -10,10 +11,15 @@ public class Move extends Command {
 
     private Move(Directions direction) {
         initLegalMoves();
+
         this.direction = direction;
-        // super(commandList, gameBoard);
     }
 
+    /**
+     * Takes in the value delegated from the commander and creates a new move command with the corresponding direction
+     * @param direction The string representation of the direction to be parsed.
+     * @return The new Move command with the given direction
+     */
     public static final Move of(String direction) {
         switch (direction.toLowerCase()) {
             case "up":
@@ -27,15 +33,28 @@ public class Move extends Command {
         }
     }
 
+    /**
+     * Overloading of the build command in the case of passing directly in a direction.
+     * This avoids having to check through cases
+     * @param direction The direction that is to be traveled
+     * @return The new move based on the passed in direction
+     */
     public static final Move of(Directions direction) {
         return new Move(direction);
     }
 
+
+    /**
+     * Executes the move command if the desired direction is in the next legal moves.
+     * Prints out corresponding information if printing is required
+     */
     @Override
     public final void execute(Board board) {
-        if (getLegalMoves(board.getState().getPosition()).contains(direction)) {
-            Collections.swap(board.getState().getBoardState(), board.getState().getPosition(),
-                    board.getState().getPosition() + this.direction.getValue());
+        BoardState state = board.getState();
+        int statePosition = state.getPosition();
+
+        if (getLegalMoves(statePosition).contains(this.direction)) {
+            Collections.swap(state.getBoardState(), statePosition, statePosition + this.direction.getValue());
         }
 
         if(board.toPrint()){

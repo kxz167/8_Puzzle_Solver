@@ -3,13 +3,10 @@ package eecs.ai.p1;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 import eecs.ai.p1.commands.*;
 
-//implements Iterable<Command>
 public final class Commander{
     private final ArrayList<Command> commands;
     private final Board gameBoard;
@@ -19,6 +16,12 @@ public final class Commander{
         this.gameBoard = gameBoard;
     }
     
+    /**
+     * Builds a new commander to handle a given file
+     * @param filename The name for the file holding the commands
+     * @return A new commander which will handle the input file
+     * @throws FileNotFoundException
+     */
     public static final Commander of(String filename) throws FileNotFoundException{
 
         Scanner fileScanner = new Scanner(new File(filename));
@@ -64,23 +67,21 @@ public final class Commander{
 
         Board gameBoard = Board.of();
 
-        // System.out.println(commands);
         return new Commander(commands, gameBoard);
     }
 
+    /**
+     * Execution of the command runs through the commandlist
+     */
     public final void execute(){
         for(Command toDo : commands){
             toDo.execute(gameBoard);
         }
 
+        //In the case analytics are required
         if(!this.gameBoard.toPrint()){
             this.gameBoard.getAnalysis().searchCost();
             this.gameBoard.getAnalysis().searchSuccessRate();
         }
     }
-
-    public final void addCommands(List<Command> addedCommands){
-        this.commands.addAll(addedCommands);
-    }
-
 }

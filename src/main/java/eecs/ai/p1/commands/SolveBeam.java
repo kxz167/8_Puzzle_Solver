@@ -1,7 +1,5 @@
 package eecs.ai.p1.commands;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -13,7 +11,7 @@ import eecs.ai.p1.Directions;
 import eecs.ai.p1.Run;
 import eecs.ai.p1.SearchNode;
 
-public class SolveBeam extends Command {
+public class SolveBeam extends Solve {
 
     private final int k;
     private int nodesGenerated = 0;
@@ -35,50 +33,55 @@ public class SolveBeam extends Command {
         this.k = k;
     }
 
+    /**
+     * Build a new instance of SolveBeam given a set number of discovery nodes
+     * 
+     * @param k The number of nodes allowed to be kept from level to level
+     * @return The returned SolveBeam command.
+     */
     public static final SolveBeam of(int k) {
-
         return new SolveBeam(k);
     }
 
+    /**
+     * Execute the solveBeam on a gameboard.
+     */
     @Override
     public final void execute(Board gameBoard) {
-        gameBoard.getVisited().clear();
-        List<Directions> solution = solve(gameBoard);
 
+        gameBoard.getVisited().clear();
+
+        List<Directions> solution = solve(gameBoard);
         int solutionSize = 0;
 
-        if(solution != null){
+        if (solution != null) {
             solutionSize = solution.size();
-        }
 
-        if(gameBoard.toPrint()){
-            System.out.println("Solve beam: " + k);
-            if(solution != null){
+            if (gameBoard.toPrint()) {
+                System.out.println("Solve beam: " + k);
                 System.out.println("Solution of length: " + solutionSize);
                 System.out.println(solution);
             }
-            else{
-                System.out.println("No solution was found with given conditions");
-            }
-        }
 
-        if(solution != null){
-            for(Directions direction : solution){
+            for (Directions direction : solution) {
                 Move.of(direction).execute(gameBoard);
             }
+        } 
+        else if (gameBoard.toPrint()) {
+            System.out.println("Solve beam: " + k);
+            System.out.println("No solution was found with given conditions");
         }
 
-        gameBoard.getAnalysis().add(Run.of("Beam", solution != null, nodesGenerated , solutionSize));
+        gameBoard.getAnalysis().add(Run.of("Beam", solution != null, nodesGenerated, solutionSize));
     }
 
-    public final List<Directions> solve(Board currentBoard) {
-        
-        SearchNode result = loop(currentBoard);
-        
-        return processSolution(result);
-    }
-
-    private final SearchNode loop(Board currentBoard){
+    /**
+     * Executes the solveBeam algorithm on the current board
+     * @param currentBoard The board to be solved with Beam search
+     * @return the SearchNode which is the final node at the goal state. Otherwise null
+     */
+    @Override
+    public final SearchNode loop(Board currentBoard) {
         Integer count = currentBoard.getMaxNodes();
 
         SearchNode currentNode = new SearchNode(null, currentBoard.getState(), null, 0);
@@ -93,28 +96,23 @@ public class SolveBeam extends Command {
                 BoardState currentState = node.getCurrentState();
                 currentBoard.addVisited(currentState.hashCode());
 
-                if (currentState.hashCode() == getGoalState().hashCode())
+                if (currentState.hashCode() == getGoalState().hashCode()){
                     return node;
+                }
+                else if (count != null && --count < 0)
+                    return null;
 
-                if(count != null && --count < 0)
-                    return node;
-
-                    
                 // Discover what is to be searched
                 List<Directions> nextMoves = this.getLegalMoves(currentState.getPosition());
 
                 for (Directions move : nextMoves) {
 
                     if (!currentBoard.checkVisited(currentState.peekNext(move))) {
+                        //Statistical Count
                         nodesGenerated++;
 
                         allPossibilities.add(
-                                new SearchNode(move, 
-                                                BoardState.of(currentState, move), 
-                                                node, 
-                                                node.getNextPathCost()
-                                            )
-                        );
+                                new SearchNode(move, BoardState.of(currentState, move), node, node.getNextPathCost()));
                     }
                 }
             }
@@ -128,46 +126,40 @@ public class SolveBeam extends Command {
             }
 
         }
+        //No path was found
         return null;
     }
 
-    private final List<Directions> processSolution(SearchNode finalNode) {
-
-        List<Directions> solutionDirection = null;
-        SearchNode consideredNode = finalNode;
-
-        if(finalNode != null){
-            solutionDirection = new ArrayList<Directions>();
-            while (consideredNode.hasPrevious()) {
-                solutionDirection.add(consideredNode.getTraveleDirections());
-                consideredNode = consideredNode.getPreviousNode();
-            }
-    
-            Collections.reverse(solutionDirection);
-        }
-
-        return solutionDirection;
-    }
-
+    /**
+     * Calculates the heuristic used to determine a ranking for nodes
+     * @param state The board state that is currently used to have the heuristic determined
+     * @return The integer value of the heuritic, equal to the manhatten distance.
+     */
     public final int heuristic(BoardState state) {
         List<Integer> consideredState = state.getBoardState();
+
         int sumMoves = 0;
 
         for (int i = 1; i < consideredState.size(); i++) {
             int moveCount = 0;
             int difference = 0;
-
-            if (consideredState.get(i) != 0)
+            //If the state isn't 0 (current position), find the difference to tile's goal location
+            if (consideredState.get(i) != 0) {
                 difference = Math.abs((consideredState.get(i) + 1) - i);
+            }
 
+            //While there is a difference
             while (difference != 0) {
+                //Jump rows by moving 3
                 if (difference >= 3) {
                     difference -= 3;
-                } else {
+                } else { //Shift left / right by moving 1
                     difference--;
                 }
+            
                 moveCount++;
             }
+
             sumMoves += moveCount;
         }
         return sumMoves;
