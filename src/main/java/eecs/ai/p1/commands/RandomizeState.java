@@ -38,6 +38,7 @@ public class RandomizeState extends Command {
         gameBoard.getVisited().clear();
 
         Random numberGenerator;
+        
         if (gameBoard.toPrint()){
             
             System.out.println("RandomizeState: " + numberMoves);

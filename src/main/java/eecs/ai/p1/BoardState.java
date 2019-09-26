@@ -54,11 +54,14 @@ public class BoardState{
      * @return The integer representing the hashcode of the next state. 
      */
     public final int peekNext(Directions direction){
+        ArrayList<Integer> copy = new ArrayList<Integer>(state.size());
+        
+        for(Integer i : state){
+            copy.add(Integer.valueOf(i));
+        }
 
-        BoardState nextState = BoardState.of(this, direction);
-        
+        BoardState nextState = new BoardState(copy);
         nextState.move(direction);
-        
         return nextState.hashCode();
     }
 
