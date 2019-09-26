@@ -13,48 +13,44 @@ public class RandomizeState extends Command {
 
     private final int numberMoves;
 
-    private RandomizeState(int numberMoves){
+    private RandomizeState(int numberMoves) {
         initLegalMoves();
         this.numberMoves = numberMoves;
     }
 
-    public static final RandomizeState of (int numberMoves){
+    public static final RandomizeState of(int numberMoves) {
         return new RandomizeState(numberMoves);
     }
 
-
     @Override
-    public final void execute(Board gameBoard){
+    public final void execute(Board gameBoard) {
         gameBoard.getVisited().clear();
 
-        if(gameBoard.toPrint())
+        if (gameBoard.toPrint())
             System.out.println("RandomizeState: " + numberMoves);
 
-        for (int i = 0; i < numberMoves; i++){
+        for (int i = 0; i < numberMoves; i++) {
             ArrayList<Directions> legalMoves = getLegalMoves(gameBoard.getState().getPosition());
             gameBoard.addVisited(gameBoard.getState().hashCode());
-            
+
             Random numberGenerator;
-            if(gameBoard.toPrint()){
+            if (gameBoard.toPrint()) {
                 numberGenerator = new Random(391);
-            }
-            else{
+            } else {
                 numberGenerator = new Random();
             }
-            
+
             List<Directions> possibleMoves = legalMoves.stream()
                     .filter(move -> !gameBoard.checkVisited(gameBoard.getState().peekNext(move)))
                     .collect(Collectors.toList());
 
-
-            System.out.println(Math.max(possibleMoves.size(),0));
-            Move.of(
-                possibleMoves.get(
-                    numberGenerator.nextInt(
-                        possibleMoves.size()
-                    )
-                )
-            ).execute(gameBoard);
+            if (possibleMoves.isEmpty()) {
+                Move.of(legalMoves.get(numberGenerator.nextInt(legalMoves.size()))).execute(gameBoard);
+            }
+            else{
+                Move.of(possibleMoves.get(numberGenerator.nextInt(possibleMoves.size()))).execute(gameBoard);
+            }
+            
         }
     }
 }

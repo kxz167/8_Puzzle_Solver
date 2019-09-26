@@ -1,0 +1,5 @@
+setState b12 345 678
+
+randomizeState 10
+
+solve A-star h2

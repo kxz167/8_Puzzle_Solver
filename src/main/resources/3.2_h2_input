@@ -1,1498 +1,2093 @@
 recorder
 
-maxNodes 6000
-
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
-randomizeState 100
-solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
 
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
 randomizeState 100
 solve A-star h2
-setState b12 345 678
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
+randomizeState 100
+solve A-star h2
 randomizeState 100
 solve A-star h2

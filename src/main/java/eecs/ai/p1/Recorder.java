@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 public class Recorder {
     private TreeMap<Integer, List<Run>> recordedAStarH1 = new TreeMap<>();
@@ -49,37 +50,40 @@ public class Recorder {
     }
 
     public void searchSuccessRate(){
-        
+        final int[] failures = {0,0,0};
+        final int[] totalRuns = {0,0,0};
+
+        Stream.of(recordedAStarH1);
         recordedAStarH1.forEach((steps, runs) -> {
-            int failure = 0;    
             for(Run run : runs){
                 if(!run.solveable()){
-                    failure ++;
+                    failures[0]++;
                 }
-                
+                totalRuns[0]++;
             }
-            System.out.println("Failures in H1: " + failure + ", fraction of: " + (double)failure / runs.size() + " fails to successes");
+            
         }); 
-        recordedAStarH2.forEach((steps, runs) -> {
-            int failure = 0;    
+        System.out.println("Failures in H1: " + failures[0] + ", fraction of: " + (double)failures[0] / totalRuns[0] + " failure rate");
+
+        recordedAStarH2.forEach((steps, runs) -> {  
             for(Run run : runs){
                 if(!run.solveable()){
-                    failure ++;
+                    failures[1]++;
                 }
-                
+                totalRuns[1]++;
             }
-            System.out.println("Failures in H2: " + failure + ", fraction of: " + (double)failure / runs.size() + " fails to successes");
         }); 
+        System.out.println("Failures in H2: " + failures[1] + ", fraction of: " + (double)failures[1] / totalRuns[1] + " failure rate");
+
         recordedBeam.forEach((steps, runs) -> {
-            int failure = 0;    
             for(Run run : runs){
                 if(!run.solveable()){
-                    failure ++;
+                    failures[2]++;
                 }
-                
+                totalRuns[2]++;
             }
-            System.out.println("Failures in beam: " + failure + ", fraction of: " + (double)failure / runs.size() + " fails to successes");
         }); 
+        System.out.println("Failures in beam: " + failures[2] + ", fraction of: " + (double)failures[2] / totalRuns[2] + " failure rate");
     }
 
     public final void add(Run recordedRun) {
